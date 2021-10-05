@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.6;
+pragma solidity ^0.6.12;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 

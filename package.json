@@ -5,6 +5,7 @@
   "author": "Vonder.finance.NFT.Development Teams",
   "dependencies": {
     "@binance-chain/bsc-connector": "^1.0.0",
+    "@chainlink/contracts": "^0.2.2",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@openzeppelin/contracts": "^3.4.1",
     "@openzeppelin/contracts-upgradeable": "^4.3.2",

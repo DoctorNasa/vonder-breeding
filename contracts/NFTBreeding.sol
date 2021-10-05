@@ -1,17 +1,12 @@
 // SPDX-License-Identifier: MIT
-
-pragma solidity ^0.8.6;
+pragma solidity 0.6.12;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol";
-// this contract allow us to create ramdom number
 import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
 
-contract NFTBreeding is ERC721, VRFConsumerBase {
+contract AdvancedCollectible is ERC721, VRFConsumerBase {
     uint256 public tokenCounter;
-    enum Breed{vonfather, vonmom, von2}
+    enum Breed{VonderDad, VonderMom, VonderKids}
     // add other things
     mapping(bytes32 => address) public requestIdToSender;
     mapping(bytes32 => string) public requestIdToTokenURI;
@@ -22,21 +17,20 @@ contract NFTBreeding is ERC721, VRFConsumerBase {
 
     bytes32 internal keyHash;
     uint256 internal fee;
-    uint256 public randomResult;
     
     constructor(address _VRFCoordinator, address _LinkToken, bytes32 _keyhash)
     public 
     VRFConsumerBase(_VRFCoordinator, _LinkToken)
-    ERC721("VonderNFT", "")
+    ERC721("Vonder", "Vonder")
     {
         tokenCounter = 0;
         keyHash = _keyhash;
-        fee = 0.1 * 10 ** 18; // breeding fee 0.1
+        fee = 0.1 * 10 ** 18;  // breeding fee
     }
 
-    function createCollectible(string memory tokenURI, uint256 userProvidedSeed) 
+    function createCollectible(string memory tokenURI) 
         public returns (bytes32){
-            bytes32 requestId = requestRandomness(keyHash, fee, userProvidedSeed);
+            bytes32 requestId = requestRandomness(keyHash, fee);
             requestIdToSender[requestId] = msg.sender;
             requestIdToTokenURI[requestId] = tokenURI;
             emit requestedCollectible(requestId);
@@ -48,7 +42,7 @@ contract NFTBreeding is ERC721, VRFConsumerBase {
         uint256 newItemId = tokenCounter;
         _safeMint(NFTsOwner, newItemId);
         _setTokenURI(newItemId, tokenURI);
-        Breed breed = Breed(randomNumber % 3); 
+        Breed breed = Breed(randomNumber % 3);    // '3' is number of type breed (Dad,Mom,Kids)
         tokenIdToBreed[newItemId] = breed;
         requestIdToTokenId[requestId] = newItemId;
         tokenCounter = tokenCounter + 1;
