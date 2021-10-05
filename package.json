@@ -1,0 +1,53 @@
+{
+  "name": "CrytoNFT ",
+  "version": "0.1.0",
+  "description": "Crypto Custom NFT and place to sell and buy on Marketplace",
+  "author": "Vonder.finance.NFT.Development Teams",
+  "dependencies": {
+    "@binance-chain/bsc-connector": "^1.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^3.4.1",
+    "@openzeppelin/contracts-upgradeable": "^4.3.2",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
+    "babel-preset-stage-3": "6.24.1",
+    "babel-register": "6.26.0",
+    "bootstrap": "4.3.1",
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "chai-bignumber": "3.0.0",
+    "dayjs": "^1.10.4",
+    "hardhat": "^2.6.4",
+    "ipfs-http-client": "^49.0.2",
+    "react": "16.8.4",
+    "react-bootstrap": "1.0.0-beta.5",
+    "react-dom": "16.8.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "2.1.3",
+    "web3": "1.0.0-beta.55"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && cp build/index.html build/404.html",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "ethereum-waffle": "^3.4.0",
+    "gh-pages": "^3.1.0"
+  }
+}
