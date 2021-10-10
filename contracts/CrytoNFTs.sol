@@ -1,7 +1,5 @@
 
 // File: erc721.sol
-
-
 // File: @openzeppelin/contracts/utils/Context.sol
 pragma solidity >=0.6.12 <0.8.0;
 

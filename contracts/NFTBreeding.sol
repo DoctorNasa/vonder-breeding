@@ -4,7 +4,7 @@ pragma solidity 0.6.12;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
 
-contract AdvancedCollectible is ERC721, VRFConsumerBase {
+contract NFTBreeding is ERC721, VRFConsumerBase {
     uint256 public tokenCounter;
     enum Breed{VonderDad, VonderMom, VonderKids}
     // add other things
