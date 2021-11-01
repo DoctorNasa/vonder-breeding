@@ -1,0 +1,64 @@
+{
+  "title": "Vonder Asset",
+  "type": "NFT Collection",
+  "name": "VonderKids",
+  "description": "The first man has begun on Vonder Universe",
+  "image": "https://gateway.pinata.cloud/ipfs/Qmc8NBhPJTYvrA1tvZBL17ywUhXahv8rPuKotN3bF4uhPz",
+  "strength": 20,
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Knight King"
+    }
+  },
+  "attributes": [
+    {
+      "trait_type": "Base",
+      "value": "StarKnight"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Big"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Surprised"
+    },
+    {
+      "trait_type": "Level",
+      "value": 5
+    },
+    {
+      "trait_type": "Stamina",
+      "value": 1.4
+    },
+    {
+      "trait_type": "Personality",
+      "value": "Stronger"
+    },
+    {
+      "display_type": "boost_number",
+      "trait_type": "Knight Power",
+      "value": 40
+    },
+    {
+      "display_type": "boost_percentage",
+      "trait_type": "Stamina Increase",
+      "value": 10
+    },
+    {
+      "display_type": "Item Sword",
+      "trait_type": "Longclaw",
+      "uri": "https://gateway.pinata.cloud/ipfs/QmWKGzXQ18gStmiyXtFQJVF15Qtz2pmpkGKSF2pPSQRFhz",
+      "value": 100
+    },
+    {
+      "display_type": "number",
+      "trait_type": "Generation",
+      "value": 2
+    }
+  ],
+  "display_type": "date",
+  "trait_type": "birthday",
+  "value": 1546360800
+}

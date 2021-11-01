@@ -283,11 +283,11 @@
       ]
     },
     "/Users/dr.lee/Desktop/Shitty/crypton/contracts/Collectible.sol": {
-      "lastModificationDate": 1633455277508,
-      "contentHash": "ee3c9a7cd340ffb4a477f7fd968f39b8",
+      "lastModificationDate": 1635194335919,
+      "contentHash": "34c739bcdf398802bfd1da85e35d66da",
       "sourceName": "contracts/Collectible.sol",
       "solcConfig": {
-        "version": "0.6.12",
+        "version": "0.8.7",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -308,22 +308,16 @@
           }
         }
       },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC721/ERC721.sol"
-      ],
-      "versionPragmas": [
-        "^0.6.12"
-      ],
-      "artifacts": [
-        "Collectible"
-      ]
+      "imports": [],
+      "versionPragmas": [],
+      "artifacts": []
     },
     "/Users/dr.lee/Desktop/Shitty/crypton/contracts/NFTBreeding.sol": {
-      "lastModificationDate": 1633644224193,
-      "contentHash": "572049ba7cce90405598db431a4da6c9",
+      "lastModificationDate": 1635194324249,
+      "contentHash": "d23657455cc43103a1db044419b712da",
       "sourceName": "contracts/NFTBreeding.sol",
       "solcConfig": {
-        "version": "0.6.12",
+        "version": "0.8.7",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -344,16 +338,9 @@
           }
         }
       },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
-        "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol"
-      ],
-      "versionPragmas": [
-        "0.6.12"
-      ],
-      "artifacts": [
-        "NFTBreeding"
-      ]
+      "imports": [],
+      "versionPragmas": [],
+      "artifacts": []
     },
     "/Users/dr.lee/Desktop/Shitty/crypton/node_modules/@chainlink/contracts/src/v0.6/VRFConsumerBase.sol": {
       "lastModificationDate": 1633454635932,
@@ -958,11 +945,11 @@
       ]
     },
     "/Users/dr.lee/Desktop/Shitty/crypton/contracts/CrytoNFTs.sol": {
-      "lastModificationDate": 1633675581083,
-      "contentHash": "b2c5b3c7cb0b5cb029c6c8d07e2cb20a",
+      "lastModificationDate": 1635194338978,
+      "contentHash": "e5056fe17bec046bdb570e6d91c0ce19",
       "sourceName": "contracts/CrytoNFTs.sol",
       "solcConfig": {
-        "version": "0.7.6",
+        "version": "0.8.7",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -984,45 +971,15 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        ">=0.6.12 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.2 <0.8.0",
-        ">=0.6.2 <0.8.0",
-        ">=0.6.2 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.2 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.12 <0.8.0"
-      ],
-      "artifacts": [
-        "Address",
-        "Context",
-        "CryptoNFTs",
-        "ERC165",
-        "ERC721",
-        "EnumerableMap",
-        "EnumerableSet",
-        "IERC165",
-        "IERC721",
-        "IERC721Enumerable",
-        "IERC721Metadata",
-        "IERC721Receiver",
-        "SafeMath",
-        "Strings"
-      ]
+      "versionPragmas": [],
+      "artifacts": []
     },
     "/Users/dr.lee/Desktop/Shitty/crypton/contracts/ERC721.sol": {
-      "lastModificationDate": 1633086231231,
-      "contentHash": "a39f16d9ef8a0aeeab75ec954cdfade6",
+      "lastModificationDate": 1635194341878,
+      "contentHash": "735b0ab507b8575104dd273b78ddcc64",
       "sourceName": "contracts/ERC721.sol",
       "solcConfig": {
-        "version": "0.7.6",
+        "version": "0.8.7",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -1044,36 +1001,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        ">=0.6.12 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.2 <0.8.0",
-        ">=0.6.2 <0.8.0",
-        ">=0.6.2 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.2 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.0 <0.8.0",
-        ">=0.6.0 <0.8.0"
-      ],
-      "artifacts": [
-        "Address",
-        "Context",
-        "ERC165",
-        "ERC721",
-        "EnumerableMap",
-        "EnumerableSet",
-        "IERC165",
-        "IERC721",
-        "IERC721Enumerable",
-        "IERC721Metadata",
-        "IERC721Receiver",
-        "SafeMath",
-        "Strings"
-      ]
+      "versionPragmas": [],
+      "artifacts": []
     },
     "/Users/dr.lee/Desktop/Shitty/crypton/contracts/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
       "lastModificationDate": 1633293814143,
@@ -1835,8 +1764,8 @@
       ]
     },
     "/Users/dr.lee/Desktop/Shitty/crypton/contracts/VonderNFT.sol": {
-      "lastModificationDate": 1633455454988,
-      "contentHash": "4d1866f8cbb76335336de5cab88d5f72",
+      "lastModificationDate": 1635194311368,
+      "contentHash": "6b9ed96f2e1c62926f82f4c61906a221",
       "sourceName": "contracts/VonderNFT.sol",
       "solcConfig": {
         "version": "0.8.7",
@@ -1860,23 +1789,9 @@
           }
         }
       },
-      "imports": [
-        "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721BurnableUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
-        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/utils/CountersUpgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.6"
-      ],
-      "artifacts": [
-        "VonderNFT"
-      ]
+      "imports": [],
+      "versionPragmas": [],
+      "artifacts": []
     },
     "/Users/dr.lee/Desktop/Shitty/crypton/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol": {
       "lastModificationDate": 1633294180302,
@@ -2637,12 +2552,162 @@
         "StorageSlotUpgradeable"
       ]
     },
-    "/Users/dr.lee/Desktop/Shitty/crypton/contracts/breed.sol": {
-      "lastModificationDate": 1633675880425,
-      "contentHash": "e9187574b35a5dabfa41cc3dc9d95f60",
-      "sourceName": "contracts/breed.sol",
+    "/Users/dr.lee/Desktop/Shitty/crypton/contracts/RandomBox.sol": {
+      "lastModificationDate": 1635194302819,
+      "contentHash": "696aef6daf755f3c0ad9d5c09426c90a",
+      "sourceName": "contracts/RandomBox.sol",
       "solcConfig": {
-        "version": "0.7.6",
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [],
+      "artifacts": []
+    },
+    "/Users/dr.lee/Desktop/Shitty/crypton/contracts/RandomNFT.sol": {
+      "lastModificationDate": 1635194316380,
+      "contentHash": "189934a77756fde1406588fad9943fb7",
+      "sourceName": "contracts/RandomNFT.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [],
+      "artifacts": []
+    },
+    "/Users/dr.lee/Desktop/Shitty/crypton/contracts/VonderBreed.sol": {
+      "lastModificationDate": 1635194331001,
+      "contentHash": "714f481e2ed111a75e2fb76fbd560751",
+      "sourceName": "contracts/VonderBreed.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [],
+      "artifacts": []
+    },
+    "/Users/dr.lee/Desktop/Shitty/crypton/contracts/VonderHospitalG1.sol": {
+      "lastModificationDate": 1635194321163,
+      "contentHash": "b59b3a207c1fab978dd4efd8c24510bf",
+      "sourceName": "contracts/VonderHospitalG1.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [],
+      "artifacts": []
+    },
+    "/Users/dr.lee/Desktop/Shitty/crypton/contracts/VonderNFTCore.sol": {
+      "lastModificationDate": 1635194315604,
+      "contentHash": "74e948c14da99d7a98acac5a062d52ca",
+      "sourceName": "contracts/VonderNFTCore.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [],
+      "artifacts": []
+    },
+    "/Users/dr.lee/Desktop/Shitty/crypton/contracts/FamilyWeightRandom.sol": {
+      "lastModificationDate": 1635194560573,
+      "contentHash": "67fc7413b2d66731a5376fd7b165b80e",
+      "sourceName": "contracts/FamilyWeightRandom.sol",
+      "solcConfig": {
+        "version": "0.4.26",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -2665,11 +2730,11 @@
       },
       "imports": [],
       "versionPragmas": [
-        ">=0.5.0 <0.8.0"
+        "^0.4.24"
       ],
       "artifacts": [
-        "ERC165",
-        "ERC721"
+        "FamilyWeightRandom",
+        "SortitionSumTreeFactory"
       ]
     }
   }

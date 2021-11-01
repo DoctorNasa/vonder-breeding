@@ -1,85 +1,117 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.6;
+// // SPDX-License-Identifier: MIT
+// pragma solidity ^0.8.2;
 
-import "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721EnumerableUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721BurnableUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/utils/CountersUpgradeable.sol";
+// import "@openzeppelin/contracts@4.3.2/token/ERC721/ERC721.sol";
+// import "@openzeppelin/contracts@4.3.2/security/Pausable.sol";
+// import "@openzeppelin/contracts@4.3.2/access/Ownable.sol";
+// import "@openzeppelin/contracts@4.3.2/token/ERC721/extensions/ERC721Burnable.sol";
 
-contract VonderNFT is Initializable, ERC721Upgradeable, ERC721EnumerableUpgradeable, ERC721URIStorageUpgradeable, PausableUpgradeable, OwnableUpgradeable, ERC721BurnableUpgradeable, UUPSUpgradeable {
-    using CountersUpgradeable for CountersUpgradeable.Counter;
 
-    CountersUpgradeable.Counter private _tokenIdCounter;
 
-    /// @custom:oz-upgrades-unsafe-allow constructor
-    constructor() initializer {}
+// contract ViperToken is ERC721 {
+    
+//     // This struct will be used to represent one viper
+//     struct Viper {
+//         uint8 genes;
+//         uint256 matronId;
+//         uint256 sireId;
+//     }
+    
+//     // List of existing vipers
+//     Viper[] public vipers;
 
-    function initialize() initializer public {
-        __ERC721_init("VonderNFT", "VNFT");
-        __ERC721Enumerable_init();
-        __ERC721URIStorage_init();
-        __Pausable_init();
-        __Ownable_init();
-        __ERC721Burnable_init();
-        __UUPSUpgradeable_init();
-    }
+//     // Event that will be emitted whenever a new viper is created
+//     event Birth(
+//         address owner,
+//         uint256 viperId,
+//         uint256 matronId,
+//         uint256 sireId,
+//         uint8 genes
+//     );
 
-    function pause() public onlyOwner {
-        _pause();
-    }
 
-    function unpause() public onlyOwner {
-        _unpause();
-    }
 
-    function safeMint(address to) public onlyOwner {
-        _safeMint(to, _tokenIdCounter.current());
-        _tokenIdCounter.increment();
-    }
 
-    function _beforeTokenTransfer(address from, address to, uint256 tokenId)
-        internal
-        whenNotPaused
-        override(ERC721Upgradeable, ERC721EnumerableUpgradeable)
-    {
-        super._beforeTokenTransfer(from, to, tokenId);
-    }
-
-    function _authorizeUpgrade(address newImplementation)
-        internal
-        onlyOwner
-        override
-    {}
-
-    // The following functions are overrides required by Solidity.
-
-    function _burn(uint256 tokenId)
-        internal
-        override(ERC721Upgradeable, ERC721URIStorageUpgradeable)
-    {
-        super._burn(tokenId);
-    }
-
-    function tokenURI(uint256 tokenId)
-        public
-        view
-        override(ERC721Upgradeable, ERC721URIStorageUpgradeable)
-        returns (string memory)
-    {
-        return super.tokenURI(tokenId);
-    }
-
-    function supportsInterface(bytes4 interfaceId)
-        public
-        view
-        override(ERC721Upgradeable, ERC721EnumerableUpgradeable)
-        returns (bool)
-    {
-        return super.supportsInterface(interfaceId);
-    }
-}
+//     /** @dev Function to create a new viper
+//       * @param matron ID of new viper's matron (one parent)
+//       * @param sire ID of new viper's sire (other parent)
+//       * @param viperOwner Address of new viper's owner
+//       * @return The new viper's ID
+//       */
+//     function createViper(
+//         uint256 matron,
+//         uint256 sire,
+//         address viperOwner
+//     )
+//         internal
+//         returns (uint)
+//     {
+//         require(viperOwner != address(0));
+//         uint8 newGenes = generateViperGenes(matron, sire);
+//         Viper memory newViper = Viper({
+//             genes: newGenes,
+//             matronId: matron,
+//             sireId: sire
+//         });
+//         uint256 newViperId = vipers.push(newViper).sub(1);
+//         super._mint(viperOwner, newViperId);
+//         emit Birth(
+//             viperOwner,
+//             newViperId,
+//             newViper.matronId,
+//             newViper.sireId,
+//             newViper.genes
+//         );
+//         return newViperId;
+//     }
+    
+//     /** @dev Function to allow user to buy a new viper (calls createViper())
+//       * @return The new viper's ID
+//       */
+//     function buyViper() external payable returns (uint256) {
+//         require(msg.value == 0.02 ether);
+//         return createViper(0, 0, msg.sender);
+//     }
+    
+//     /** @dev Function to breed 2 vipers to create a new one
+//       * @param matronId ID of new viper's matron (one parent)
+//       * @param sireId ID of new viper's sire (other parent)
+//       * @return The new viper's ID
+//       */
+//     function breedVipers(uint256 matronId, uint256 sireId) external payable returns (uint256) {
+//         require(msg.value == 0.05 ether);
+//         return createViper(matronId, sireId, msg.sender);
+//     }
+    
+//     /** @dev Function to retrieve a specific viper's details.
+//       * @param viperId ID of the viper who's details will be retrieved
+//       * @return An array, [viper's ID, viper's genes, matron's ID, sire's ID]
+//       */
+//     function getViperDetails(uint256 viperId) external view returns (uint256, uint8, uint256, uint256) {
+//         Viper storage viper = vipers[viperId];
+//         return (viperId, viper.genes, viper.matronId, viper.sireId);
+//     }
+    
+//     /** @dev Function to get a list of owned vipers' IDs
+//       * @return A uint array which contains IDs of all owned vipers
+//       */
+//     function ownedVipers() external view returns(uint256[] memory) {
+//         uint256 viperCount = balanceOf(msg.sender);
+//         if (viperCount == 0) {
+//             return new uint256[](0);
+//         } else {
+//             uint256[] memory result = new uint256[](viperCount);
+//             uint256 totalVipers = vipers.length;
+//             uint256 resultIndex = 0;
+//             uint256 viperId = 0;
+//             while (viperId < totalVipers) {
+//                 if (ownerOf(viperId) == msg.sender) {
+//                     result[resultIndex] = viperId;
+//                     resultIndex = resultIndex.add(1);
+//                 }
+//                 viperId = viperId.add(1);
+//             }
+//             return result;
+//         }
+//     }
+// }
